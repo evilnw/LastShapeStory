@@ -1,0 +1,171 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/level.cs" type="Script" id=1]
+[ext_resource path="res://objects/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/level_map/2/level_map.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/block.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/ui/ui_game_controller.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objects/bonus_spawner.tscn" type="PackedScene" id=6]
+
+[node name="level" type="Node"]
+script = ExtResource( 1 )
+color_background = "222533"
+
+[node name="game_field" type="Node" parent="."]
+
+[node name="player_kinematic_body" parent="game_field" instance=ExtResource( 2 )]
+position = Vector2( 330.067, 612.013 )
+
+[node name="level_map" parent="game_field" instance=ExtResource( 3 )]
+
+[node name="left_main_block" parent="game_field" instance=ExtResource( 4 )]
+position = Vector2( 32, 800 )
+color_name = "a3c0e6"
+width = 32.0
+height = 1600.0
+distance_x = 1344.0
+move_speed = 45.0
+
+[node name="right__main_block" parent="game_field" instance=ExtResource( 4 )]
+position = Vector2( 1312, 800 )
+color_name = "a3c0e6"
+width = 32.0
+height = 1600.0
+distance_x = 1344.0
+move_speed = 45.0
+
+[node name="top_main_block" parent="game_field" instance=ExtResource( 4 )]
+position = Vector2( 1344, 32 )
+color_name = "a3c0e6"
+width = 2688.0
+height = 32.0
+distance_y = 736.0
+move_speed = 25.0
+
+[node name="bottom_main_block2" parent="game_field" instance=ExtResource( 4 )]
+position = Vector2( 1344, 832 )
+color_name = "a3c0e6"
+width = 2688.0
+height = 32.0
+distance_y = 736.0
+move_speed = 25.0
+
+[node name="rotation_block_1" parent="game_field" instance=ExtResource( 4 )]
+position = Vector2( 611.188, 288 )
+color_name = "a3c0e6"
+width = 512.0
+height = 32.0
+rotation_speed_direction = 0.4
+
+[node name="rotation_block_5" parent="game_field" instance=ExtResource( 4 )]
+position = Vector2( 1326.89, 251.647 )
+color_name = "a3c0e6"
+width = 512.0
+height = 32.0
+rotation_speed_direction = 0.4
+
+[node name="rotation_block_3" parent="game_field" instance=ExtResource( 4 )]
+position = Vector2( 611.188, 1088 )
+color_name = "a3c0e6"
+width = 512.0
+height = 32.0
+rotation_speed_direction = 0.2
+
+[node name="rotation_block_6" parent="game_field" instance=ExtResource( 4 )]
+position = Vector2( 1335.98, 1287.94 )
+color_name = "a3c0e6"
+width = 512.0
+height = 32.0
+rotation_speed_direction = 0.2
+
+[node name="rotation_block_4" parent="game_field" instance=ExtResource( 4 )]
+position = Vector2( 2077, 1088 )
+color_name = "a3c0e6"
+width = 512.0
+height = 32.0
+rotation_speed_direction = -0.4
+
+[node name="rotation_block_2" parent="game_field" instance=ExtResource( 4 )]
+position = Vector2( 2077, 288 )
+color_name = "a3c0e6"
+width = 512.0
+height = 32.0
+rotation_speed_direction = -0.23
+
+[node name="center_rotation_block_1" parent="game_field" instance=ExtResource( 4 )]
+position = Vector2( 1344, 800 )
+color_name = "a3c0e6"
+width = 32.0
+height = 512.0
+rotation_speed_direction = 0.23
+
+[node name="node" type="Node" parent="game_field"]
+
+[node name="block" parent="game_field/node" instance=ExtResource( 4 )]
+position = Vector2( 2656.16, -96 )
+color_name = "222533"
+distance_x = 2000.0
+move_speed = 100.0
+move_direction_x = 0
+
+[node name="block5" parent="game_field/node" instance=ExtResource( 4 )]
+position = Vector2( 2784, 32 )
+color_name = "222533"
+distance_y = 1632.0
+move_speed = 100.0
+move_direction_x = 0
+
+[node name="block7" parent="game_field/node" instance=ExtResource( 4 )]
+position = Vector2( 2912, 32 )
+collision_layer = 0
+collision_mask = 0
+color_name = "222533"
+distance_y = 1632.0
+move_speed = 75.0
+move_direction_x = 0
+
+[node name="block6" parent="game_field/node" instance=ExtResource( 4 )]
+position = Vector2( 2848, 1632 )
+color_name = "222533"
+distance_y = 1600.0
+move_speed = 100.0
+move_direction_x = 0
+move_direction_y = 0
+
+[node name="block8" parent="game_field/node" instance=ExtResource( 4 )]
+position = Vector2( 2976, 1632 )
+color_name = "222533"
+distance_y = 1600.0
+move_speed = 75.0
+move_direction_x = 0
+move_direction_y = 0
+
+[node name="block2" parent="game_field/node" instance=ExtResource( 4 )]
+position = Vector2( 32, -160 )
+color_name = "222533"
+distance_x = 2000.0
+move_speed = 100.0
+
+[node name="block3" parent="game_field/node" instance=ExtResource( 4 )]
+position = Vector2( -96, -96 )
+color_name = "222533"
+distance_y = 1200.0
+move_speed = 100.0
+
+[node name="block4" parent="game_field/node" instance=ExtResource( 4 )]
+position = Vector2( -160, 1632.45 )
+color_name = "222533"
+distance_y = 1200.0
+move_speed = 100.0
+move_direction_y = 0
+
+[node name="bonus_spawner" parent="game_field" instance=ExtResource( 6 )]
+game_field_width = 2650
+game_field_height = 1560
+
+[node name="ui_game_controller" parent="." instance=ExtResource( 5 )]
+
+[node name="score_timer" type="Timer" parent="."]
+autostart = true
+[connection signal="rotation_signal" from="ui_game_controller" to="game_field/player_kinematic_body" method="rotation_inc_msg"]
+[connection signal="timeout" from="score_timer" to="." method="add_score_from_timer"]

@@ -1,0 +1,35 @@
+﻿<Project Sdk="Godot.NET.Sdk/3.2.3">
+  <PropertyGroup>
+    <ProjectGuid>{31848E54-F0DE-4BE8-A8BD-51D95CD632EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LastShapeStory</RootNamespace>
+    <AssemblyName>Last Shape Story</AssemblyName>
+    <TargetFramework>net472</TargetFramework>
+    <!--The following properties were overriden during migration to prevent errors.
+    Enabling them may require other manual changes to the project and its files.-->
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="scripts\block.cs" />
+    <Compile Include="scripts\bonus.cs" />
+    <Compile Include="scripts\bonus_spawner.cs" />
+    <Compile Include="scripts\circle.cs" />
+    <Compile Include="scripts\level.cs" />
+    <Compile Include="scripts\main_menu.cs" />
+    <Compile Include="scripts\player.cs" />
+    <Compile Include="scripts\Settings.cs" />
+    <Compile Include="scripts\ui\game_over_menu.cs" />
+    <Compile Include="scripts\ui\in_game_control.cs" />
+    <Compile Include="scripts\ui\in_game_menu.cs" />
+    <Compile Include="scripts\ui\level_select_menu.cs" />
+    <Compile Include="scripts\ui\main_menu_controller.cs" />
+    <Compile Include="scripts\ui\touch_field_button.cs" />
+    <Compile Include="scripts\ui\ui_game_controller.cs" />
+  </ItemGroup>
+</Project>

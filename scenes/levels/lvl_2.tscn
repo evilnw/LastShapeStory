@@ -1,0 +1,193 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/level.cs" type="Script" id=1]
+[ext_resource path="res://objects/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/level_map/3/level_map.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/block.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/ui/ui_game_controller.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objects/bonus_spawner.tscn" type="PackedScene" id=6]
+
+[node name="level" type="Node"]
+script = ExtResource( 1 )
+color_background = "fafffc"
+level_number = 2
+
+[node name="game_field" type="Node" parent="."]
+
+[node name="player_kinematic_body" parent="game_field" instance=ExtResource( 2 )]
+position = Vector2( 359.906, 949.169 )
+
+[node name="level_map" parent="game_field" instance=ExtResource( 3 )]
+
+[node name="horizontal_blocks" type="Node" parent="game_field"]
+
+[node name="h_block_1" parent="game_field/horizontal_blocks" instance=ExtResource( 4 )]
+position = Vector2( 164, 42.475 )
+color_name = "2bdb72"
+width = 320.0
+height = 32.0
+distance_y = 1500.0
+move_speed = 100.0
+
+[node name="h_block_11" parent="game_field/horizontal_blocks" instance=ExtResource( 4 )]
+position = Vector2( 253.608, 1817.09 )
+color_name = "2bdb72"
+width = 320.0
+height = 32.0
+distance_y = 1786.0
+move_speed = 90.0
+move_direction_y = 0
+
+[node name="h_block_7" parent="game_field/horizontal_blocks" instance=ExtResource( 4 )]
+position = Vector2( 1548.45, 272.074 )
+color_name = "2bdb72"
+width = 320.0
+height = 32.0
+distance_y = 1500.0
+move_speed = 20.0
+
+[node name="h_block_8" parent="game_field/horizontal_blocks" instance=ExtResource( 4 )]
+position = Vector2( 1627.37, 972.83 )
+color_name = "2bdb72"
+width = 320.0
+height = 32.0
+distance_y = 750.0
+move_speed = 45.0
+
+[node name="h_block_9" parent="game_field/horizontal_blocks" instance=ExtResource( 4 )]
+position = Vector2( 1646.5, 1754.9 )
+color_name = "2bdb72"
+width = 320.0
+height = 32.0
+distance_y = 1650.0
+move_speed = 95.0
+move_direction_y = 0
+
+[node name="h_block_10" parent="game_field/horizontal_blocks" instance=ExtResource( 4 )]
+position = Vector2( 1029.46, 1484.65 )
+color_name = "2bdb72"
+width = 320.0
+height = 32.0
+distance_y = 1500.0
+move_speed = 23.0
+move_direction_y = 0
+
+[node name="h_block_6" parent="game_field/horizontal_blocks" instance=ExtResource( 4 )]
+position = Vector2( 1409.73, 54.4333 )
+color_name = "2bdb72"
+width = 320.0
+height = 32.0
+distance_y = 1764.0
+move_speed = 110.0
+
+[node name="h_block_5" parent="game_field/horizontal_blocks" instance=ExtResource( 4 )]
+position = Vector2( 955.314, 49.65 )
+color_name = "2bdb72"
+width = 320.0
+height = 32.0
+distance_y = 1700.0
+move_speed = 35.0
+
+[node name="h_block_4" parent="game_field/horizontal_blocks" instance=ExtResource( 4 )]
+position = Vector2( 611.782, 322.392 )
+color_name = "2bdb72"
+width = 320.0
+height = 32.0
+distance_y = 1000.0
+move_speed = 68.0
+
+[node name="h_block_3" parent="game_field/horizontal_blocks" instance=ExtResource( 4 )]
+position = Vector2( 685.683, 1768.91 )
+color_name = "2bdb72"
+width = 320.0
+height = 32.0
+distance_y = 1500.0
+move_speed = 120.0
+move_direction_y = 0
+
+[node name="h_block_2" parent="game_field/horizontal_blocks" instance=ExtResource( 4 )]
+position = Vector2( 972.441, 651.958 )
+color_name = "2bdb72"
+width = 320.0
+height = 32.0
+distance_y = 800.0
+move_speed = 58.0
+
+[node name="vertical_blocks" type="Node" parent="game_field"]
+
+[node name="v_block_1" parent="game_field/vertical_blocks" instance=ExtResource( 4 )]
+position = Vector2( 50.2248, 253.516 )
+color_name = "f58931"
+width = 32.0
+height = 320.0
+distance_x = 960.0
+move_speed = 110.0
+
+[node name="v_block_8" parent="game_field/vertical_blocks" instance=ExtResource( 4 )]
+position = Vector2( 1879.84, 200.899 )
+color_name = "f58931"
+width = 32.0
+height = 320.0
+distance_x = 700.0
+move_speed = 70.0
+move_direction_x = 0
+
+[node name="v_block_2" parent="game_field/vertical_blocks" instance=ExtResource( 4 )]
+position = Vector2( 1853.53, 691.189 )
+color_name = "f58931"
+width = 32.0
+height = 320.0
+distance_x = 960.0
+move_speed = 67.0
+move_direction_x = 0
+
+[node name="v_block_3" parent="game_field/vertical_blocks" instance=ExtResource( 4 )]
+position = Vector2( 136.324, 959.055 )
+color_name = "f58931"
+width = 32.0
+height = 320.0
+distance_x = 960.0
+move_speed = 95.0
+
+[node name="v_block_4" parent="game_field/vertical_blocks" instance=ExtResource( 4 )]
+position = Vector2( 346.79, 1274.75 )
+color_name = "f58931"
+width = 32.0
+height = 320.0
+distance_x = 960.0
+move_speed = 117.0
+
+[node name="v_block_5" parent="game_field/vertical_blocks" instance=ExtResource( 4 )]
+position = Vector2( 1004.5, 351.574 )
+color_name = "f58931"
+width = 32.0
+height = 320.0
+distance_x = 880.0
+move_speed = 107.0
+
+[node name="v_block_6" parent="game_field/vertical_blocks" instance=ExtResource( 4 )]
+position = Vector2( 887.305, 1430.21 )
+color_name = "f58931"
+width = 32.0
+height = 320.0
+distance_x = 960.0
+move_speed = 64.0
+
+[node name="v_block_7" parent="game_field/vertical_blocks" instance=ExtResource( 4 )]
+position = Vector2( 1879.84, 1600.02 )
+color_name = "f58931"
+width = 32.0
+height = 320.0
+distance_x = 1870.0
+move_speed = 94.0
+move_direction_x = 0
+
+[node name="bonus_spawner" parent="game_field" instance=ExtResource( 6 )]
+game_field_height = 1850
+
+[node name="ui_game_controller" parent="." instance=ExtResource( 5 )]
+
+[node name="score_timer" type="Timer" parent="."]
+autostart = true
+[connection signal="rotation_signal" from="ui_game_controller" to="game_field/player_kinematic_body" method="rotation_inc_msg"]
+[connection signal="timeout" from="score_timer" to="." method="add_score_from_timer"]

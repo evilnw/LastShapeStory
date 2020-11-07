@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "uiY4kW/sah9zMUaRqOh/MZlyyMxmtnVZGm3sdfPHluadJUZINc9ALULPbuEWIe2Red4AEV4nW3GIaLV6Zw8E1A==",
+  "success": true,
+  "projectFilePath": "E:\\Projects\\Last Shape Story\\Last Shape Story.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\evilnw\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\evilnw\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.0\\microsoft.netframework.referenceassemblies.net472.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

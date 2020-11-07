@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/ui/game_over_menu.cs" type="Script" id=1]
+[ext_resource path="res://objects/ui/back_to_mainmenu_button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/ui/restart_lvl_button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://fonts/FFFFORWA.TTF" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 4 )
+
+[node name="game_over_menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="h_box_container" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -150.0
+margin_right = 150.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="v_box_container" type="VBoxContainer" parent="h_box_container"]
+margin_right = 300.0
+margin_bottom = 1080.0
+alignment = 1
+
+[node name="score_label" type="Label" parent="h_box_container/v_box_container"]
+margin_top = 341.0
+margin_right = 300.0
+margin_bottom = 407.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.694118, 0.243137, 0.32549, 1 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="back_to_mainmenu_button" parent="h_box_container/v_box_container" instance=ExtResource( 2 )]
+margin_top = 411.0
+margin_bottom = 561.0
+
+[node name="margin_container" type="MarginContainer" parent="h_box_container/v_box_container"]
+margin_top = 565.0
+margin_right = 300.0
+margin_bottom = 585.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="restart_lvl_button" parent="h_box_container/v_box_container" instance=ExtResource( 3 )]
+margin_top = 589.0
+margin_bottom = 739.0
+[connection signal="pressed" from="h_box_container/v_box_container/back_to_mainmenu_button" to="." method="mainmenu_button_pressed"]
+[connection signal="pressed" from="h_box_container/v_box_container/restart_lvl_button" to="." method="restart_level_button_pressed"]

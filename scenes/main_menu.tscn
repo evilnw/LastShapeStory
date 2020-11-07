@@ -1,0 +1,102 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/main_menu.cs" type="Script" id=1]
+[ext_resource path="res://objects/ui/main_menu_controller.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/tileset.tres" type="TileSet" id=3]
+[ext_resource path="res://objects/block.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/ad.gd" type="Script" id=5]
+
+[node name="main_menu" type="Node"]
+script = ExtResource( 1 )
+background_color_name = "ffffff"
+
+[node name="main_menu_controller" parent="." instance=ExtResource( 2 )]
+color_play_button = "3f48c2"
+
+[node name="camera_2d" type="Camera2D" parent="main_menu_controller"]
+position = Vector2( 960, 540 )
+current = true
+editor_draw_screen = false
+
+[node name="tile_map" type="TileMap" parent="main_menu_controller"]
+tile_set = ExtResource( 3 )
+format = 1
+
+[node name="block" parent="main_menu_controller" instance=ExtResource( 4 )]
+position = Vector2( 284.531, 836.855 )
+color_name = "a63d57"
+enable_difficulty = false
+width = 32.0
+height = 32.0
+distance_x = 300.0
+move_speed = 100.0
+
+[node name="block3" parent="main_menu_controller" instance=ExtResource( 4 )]
+position = Vector2( 424.007, 150.634 )
+color_name = "a63d57"
+enable_difficulty = false
+width = 32.0
+height = 32.0
+distance_x = 300.0
+move_speed = 100.0
+move_direction_x = 0
+
+[node name="block4" parent="main_menu_controller" instance=ExtResource( 4 )]
+position = Vector2( 619.273, 926.12 )
+color_name = "a63d57"
+enable_difficulty = false
+width = 32.0
+height = 32.0
+distance_x = 3000.0
+move_speed = 100.0
+
+[node name="block5" parent="main_menu_controller" instance=ExtResource( 4 )]
+position = Vector2( 1319.44, 100.423 )
+color_name = "a63d57"
+enable_difficulty = false
+width = 32.0
+height = 32.0
+distance_x = 700.0
+move_speed = 100.0
+
+[node name="block6" parent="main_menu_controller" instance=ExtResource( 4 )]
+position = Vector2( 1126.97, 736.433 )
+color_name = "a63d57"
+enable_difficulty = false
+width = 32.0
+height = 32.0
+distance_y = 300.0
+move_speed = 100.0
+
+[node name="block7" parent="main_menu_controller" instance=ExtResource( 4 )]
+position = Vector2( 1687.66, 820.118 )
+color_name = "a63d57"
+enable_difficulty = false
+width = 32.0
+height = 32.0
+distance_y = 700.0
+move_speed = 100.0
+move_direction_y = 0
+
+[node name="block8" parent="main_menu_controller" instance=ExtResource( 4 )]
+position = Vector2( 1428.23, 390.533 )
+color_name = "a63d57"
+enable_difficulty = false
+width = 32.0
+height = 32.0
+distance_x = 200.0
+move_speed = 100.0
+
+[node name="block2" parent="main_menu_controller" instance=ExtResource( 4 )]
+position = Vector2( 959.594, 128.318 )
+color_name = "a63d57"
+enable_difficulty = false
+width = 32.0
+height = 32.0
+distance_x = 300.0
+move_speed = 100.0
+move_direction_x = 0
+
+[node name="ad" type="Node2D" parent="."]
+script = ExtResource( 5 )
+[connection signal="ready" from="." to="ad" method="_show_banner"]

@@ -1,0 +1,6 @@
+E:\Projects\Last Shape Story\.mono\temp\bin\Debug\Last Shape Story.dll
+E:\Projects\Last Shape Story\.mono\temp\bin\Debug\Last Shape Story.pdb
+E:\Projects\Last Shape Story\.mono\temp\obj\Debug\Last Shape Story.csprojAssemblyReference.cache
+E:\Projects\Last Shape Story\.mono\temp\obj\Debug\Last Shape Story.csproj.CoreCompileInputs.cache
+E:\Projects\Last Shape Story\.mono\temp\obj\Debug\Last Shape Story.dll
+E:\Projects\Last Shape Story\.mono\temp\obj\Debug\Last Shape Story.pdb

@@ -1,0 +1,375 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://fonts/FFFFORWA.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/ui/level_select_menu.cs" type="Script" id=2]
+[ext_resource path="res://objects/block.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/ad.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 56
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 56
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 56
+font_data = ExtResource( 1 )
+
+[node name="control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="margin_container" type="MarginContainer" parent="."]
+anchor_right = 1.0
+margin_right = 0.00012207
+margin_bottom = 668.0
+custom_constants/margin_right = 32
+custom_constants/margin_top = 128
+custom_constants/margin_left = 32
+custom_constants/margin_bottom = 32
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="v_box_container" type="VBoxContainer" parent="margin_container"]
+margin_left = 32.0
+margin_top = 128.0
+margin_right = 1888.0
+margin_bottom = 732.0
+alignment = 1
+
+[node name="line_2d" type="Line2D" parent="margin_container/v_box_container"]
+visible = false
+points = PoolVector2Array( -1000, 0, 3000, 0 )
+width = 2.0
+default_color = Color( 0.65098, 0.239216, 0.341176, 1 )
+
+[node name="h_level_select_container" type="HBoxContainer" parent="margin_container/v_box_container"]
+margin_right = 1856.0
+margin_bottom = 604.0
+alignment = 1
+
+[node name="v_level_1_container" type="VBoxContainer" parent="margin_container/v_box_container/h_level_select_container"]
+margin_left = 404.0
+margin_right = 704.0
+margin_bottom = 604.0
+
+[node name="score_lvl_1_label" type="Label" parent="margin_container/v_box_container/h_level_select_container/v_level_1_container"]
+margin_right = 300.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.133333, 0.145098, 0.2, 1 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="texture_button" type="TextureButton" parent="margin_container/v_box_container/h_level_select_container/v_level_1_container"]
+margin_top = 104.0
+margin_right = 300.0
+margin_bottom = 604.0
+rect_min_size = Vector2( 300, 500 )
+
+[node name="label" type="Label" parent="margin_container/v_box_container/h_level_select_container/v_level_1_container/texture_button"]
+margin_top = -1.56482
+margin_right = 300.0
+margin_bottom = 498.435
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.133333, 0.145098, 0.2, 1 )
+text = "I"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="line_2d" type="Line2D" parent="margin_container/v_box_container/h_level_select_container/v_level_1_container/texture_button"]
+points = PoolVector2Array( 0, 0, 300, 0 )
+default_color = Color( 0.133333, 0.145098, 0.2, 1 )
+
+[node name="objects_button_1" type="Node" parent="margin_container/v_box_container/h_level_select_container/v_level_1_container/texture_button"]
+
+[node name="block" parent="margin_container/v_box_container/h_level_select_container/v_level_1_container/texture_button" instance=ExtResource( 3 )]
+position = Vector2( 32, 32 )
+collision_layer = 0
+collision_mask = 0
+color_name = "222533"
+enable_difficulty = false
+width = 8.0
+rotation_speed_direction = 1.0
+
+[node name="block2" parent="margin_container/v_box_container/h_level_select_container/v_level_1_container/texture_button" instance=ExtResource( 3 )]
+position = Vector2( 268, 468 )
+collision_layer = 0
+collision_mask = 0
+color_name = "222533"
+enable_difficulty = false
+width = 8.0
+rotation_speed_direction = 1.0
+
+[node name="line_2d" type="Line2D" parent="margin_container/v_box_container/h_level_select_container/v_level_1_container"]
+points = PoolVector2Array( 0, 0, 0, 600 )
+default_color = Color( 0.133333, 0.145098, 0.2, 1 )
+
+[node name="margin_container" type="MarginContainer" parent="margin_container/v_box_container/h_level_select_container"]
+margin_left = 708.0
+margin_right = 772.0
+margin_bottom = 604.0
+custom_constants/margin_right = 32
+custom_constants/margin_left = 32
+
+[node name="line_2d" type="Line2D" parent="margin_container/v_box_container/h_level_select_container/margin_container"]
+points = PoolVector2Array( 0, 0, 0, 600 )
+default_color = Color( 0.133333, 0.145098, 0.2, 1 )
+
+[node name="v_level_2_container" type="VBoxContainer" parent="margin_container/v_box_container/h_level_select_container"]
+margin_left = 776.0
+margin_right = 1076.0
+margin_bottom = 604.0
+
+[node name="score_lvl_2_label" type="Label" parent="margin_container/v_box_container/h_level_select_container/v_level_2_container"]
+margin_right = 300.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.960784, 0.537255, 0.192157, 1 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="texture_button" type="TextureButton" parent="margin_container/v_box_container/h_level_select_container/v_level_2_container"]
+margin_top = 104.0
+margin_right = 300.0
+margin_bottom = 604.0
+rect_min_size = Vector2( 300, 500 )
+
+[node name="label" type="Label" parent="margin_container/v_box_container/h_level_select_container/v_level_2_container/texture_button"]
+margin_right = 300.0
+margin_bottom = 500.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.960784, 0.537255, 0.192157, 1 )
+text = "II"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="line_2d" type="Line2D" parent="margin_container/v_box_container/h_level_select_container/v_level_2_container/texture_button"]
+points = PoolVector2Array( 0, 0, 300, 0 )
+default_color = Color( 0.960784, 0.537255, 0.192157, 1 )
+
+[node name="block" parent="margin_container/v_box_container/h_level_select_container/v_level_2_container/texture_button" instance=ExtResource( 3 )]
+position = Vector2( 4, 32 )
+collision_layer = 0
+collision_mask = 0
+color_name = "f58931"
+enable_difficulty = false
+width = 8.0
+distance_x = 292.0
+move_speed = 20.0
+
+[node name="block2" parent="margin_container/v_box_container/h_level_select_container/v_level_2_container/texture_button" instance=ExtResource( 3 )]
+position = Vector2( 32, 492 )
+collision_layer = 0
+collision_mask = 0
+color_name = "f58931"
+enable_difficulty = false
+height = 8.0
+distance_y = 494.0
+move_speed = 40.0
+move_direction_y = 0
+
+[node name="line_2d" type="Line2D" parent="margin_container/v_box_container/h_level_select_container/v_level_2_container"]
+points = PoolVector2Array( 0, 0, 0, 600 )
+default_color = Color( 0.960784, 0.537255, 0.192157, 1 )
+
+[node name="margin_container2" type="MarginContainer" parent="margin_container/v_box_container/h_level_select_container"]
+margin_left = 1080.0
+margin_right = 1144.0
+margin_bottom = 604.0
+custom_constants/margin_right = 32
+custom_constants/margin_left = 32
+
+[node name="line_2d" type="Line2D" parent="margin_container/v_box_container/h_level_select_container/margin_container2"]
+points = PoolVector2Array( 0, 0, 0, 600 )
+default_color = Color( 0.960784, 0.537255, 0.192157, 1 )
+
+[node name="v_level_3_container" type="VBoxContainer" parent="margin_container/v_box_container/h_level_select_container"]
+margin_left = 1148.0
+margin_right = 1448.0
+margin_bottom = 604.0
+
+[node name="score_lvl_3_label" type="Label" parent="margin_container/v_box_container/h_level_select_container/v_level_3_container"]
+margin_right = 300.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.65098, 0.239216, 0.341176, 1 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="texture_button" type="TextureButton" parent="margin_container/v_box_container/h_level_select_container/v_level_3_container"]
+margin_top = 104.0
+margin_right = 300.0
+margin_bottom = 604.0
+rect_min_size = Vector2( 300, 500 )
+
+[node name="label" type="Label" parent="margin_container/v_box_container/h_level_select_container/v_level_3_container/texture_button"]
+margin_right = 300.0
+margin_bottom = 500.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.65098, 0.239216, 0.341176, 1 )
+text = "III"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="line_2d" type="Line2D" parent="margin_container/v_box_container/h_level_select_container/v_level_3_container/texture_button"]
+points = PoolVector2Array( 0, 0, 300, 0 )
+default_color = Color( 0.65098, 0.239216, 0.341176, 1 )
+
+[node name="block" parent="margin_container/v_box_container/h_level_select_container/v_level_3_container/texture_button" instance=ExtResource( 3 )]
+position = Vector2( 16, 4 )
+collision_layer = 0
+collision_mask = 0
+color_name = "a63d57"
+enable_difficulty = false
+width = 8.0
+height = 8.0
+distance_y = 490.0
+move_speed = 37.0
+
+[node name="block2" parent="margin_container/v_box_container/h_level_select_container/v_level_3_container/texture_button" instance=ExtResource( 3 )]
+position = Vector2( 192.828, 25.9078 )
+collision_layer = 0
+collision_mask = 0
+color_name = "a63d57"
+enable_difficulty = false
+width = 8.0
+height = 8.0
+distance_y = 450.0
+move_speed = 57.0
+
+[node name="block3" parent="margin_container/v_box_container/h_level_select_container/v_level_3_container/texture_button" instance=ExtResource( 3 )]
+position = Vector2( 271.07, 25.9078 )
+collision_layer = 0
+collision_mask = 0
+color_name = "a63d57"
+enable_difficulty = false
+width = 8.0
+height = 8.0
+distance_y = 400.0
+move_speed = 61.0
+
+[node name="line_2d" type="Line2D" parent="margin_container/v_box_container/h_level_select_container/v_level_3_container"]
+points = PoolVector2Array( 0, 0, 0, 600 )
+default_color = Color( 0.65098, 0.239216, 0.341176, 1 )
+
+[node name="margin_container3" type="MarginContainer" parent="margin_container/v_box_container/h_level_select_container"]
+margin_left = 1452.0
+margin_right = 1452.0
+margin_bottom = 604.0
+
+[node name="line_2d" type="Line2D" parent="margin_container/v_box_container/h_level_select_container/margin_container3"]
+points = PoolVector2Array( 0, 0, 0, 600 )
+default_color = Color( 0.65098, 0.239216, 0.341176, 1 )
+
+[node name="block" parent="." instance=ExtResource( 3 )]
+position = Vector2( 70.418, 32.8618 )
+collision_layer = 0
+collision_mask = 0
+color_name = "dc435b"
+enable_difficulty = false
+width = 32.0
+height = 32.0
+distance_x = 2000.0
+move_speed = 100.0
+
+[node name="block2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1768.27, 785.552 )
+collision_layer = 0
+collision_mask = 0
+color_name = "3f48c2"
+enable_difficulty = false
+width = 32.0
+height = 32.0
+distance_x = 1120.0
+move_speed = 47.0
+move_direction_x = 0
+
+[node name="block3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 181.522, 848.146 )
+collision_layer = 0
+collision_mask = 0
+color_name = "dc435b"
+enable_difficulty = false
+width = 32.0
+height = 32.0
+distance_x = 1500.0
+move_speed = 67.0
+
+[node name="block5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 56.3344, 169.003 )
+collision_layer = 0
+collision_mask = 0
+color_name = "3f48c2"
+enable_difficulty = false
+width = 32.0
+height = 32.0
+distance_y = 800.0
+move_speed = 75.0
+
+[node name="block6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1668.12, 773.033 )
+collision_layer = 0
+collision_mask = 0
+color_name = "dc435b"
+enable_difficulty = false
+width = 32.0
+height = 32.0
+distance_y = 700.0
+move_speed = 100.0
+move_direction_y = 0
+
+[node name="block4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1799.57, 92.3258 )
+collision_layer = 0
+collision_mask = 0
+color_name = "3f48c2"
+enable_difficulty = false
+width = 32.0
+height = 32.0
+distance_x = 1700.0
+move_speed = 67.0
+move_direction_x = 0
+
+[node name="ad" type="Node2D" parent="."]
+script = ExtResource( 4 )
+[connection signal="pressed" from="margin_container/v_box_container/h_level_select_container/v_level_1_container/texture_button" to="ad" method="_hide_banner"]
+[connection signal="pressed" from="margin_container/v_box_container/h_level_select_container/v_level_1_container/texture_button" to="." method="select_lvl_button_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="margin_container/v_box_container/h_level_select_container/v_level_2_container/texture_button" to="ad" method="_hide_banner"]
+[connection signal="pressed" from="margin_container/v_box_container/h_level_select_container/v_level_2_container/texture_button" to="." method="select_lvl_button_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="margin_container/v_box_container/h_level_select_container/v_level_3_container/texture_button" to="ad" method="_hide_banner"]
+[connection signal="pressed" from="margin_container/v_box_container/h_level_select_container/v_level_3_container/texture_button" to="." method="select_lvl_button_pressed" binds= [ 3 ]]

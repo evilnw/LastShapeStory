@@ -1,0 +1,20 @@
+[gd_scene format=2]
+
+[node name="back_to_mainmenu_button" type="TextureButton"]
+margin_right = 300.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 300, 150 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background_polygon" type="Polygon2D" parent="."]
+z_index = -1
+color = Color( 0.231373, 0.364706, 0.788235, 1 )
+polygon = PoolVector2Array( 0, 0, 300, 0, 300, 150, 0, 150 )
+
+[node name="logo_polygon" type="Polygon2D" parent="."]
+position = Vector2( 0, -0.607285 )
+scale = Vector2( 1, 2.44276 )
+color = Color( 1, 0.921569, 0.2, 1 )
+polygon = PoolVector2Array( 150, 5, 215, 55, 85, 55 )
